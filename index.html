@@ -1,29 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
-<header>
+<head>
     <title>LOCK IN</title>
     <link rel="stylesheet" href="style.css">
-</header>
+</head>
 <body>
     <h1>I NEED TO LOCK IN!!</h1>
 
     <div class="whatwedoin">
         <h3>What are you working on today?</h3>
         
-        <label for="activity1">Fist Activity (time is in minutes)</label>
-        <input type="text" id="activity1" placeholder="e.g., code, clean, homework">
-        <input type="numbers" id="activity1time" placeholder="30">
+        <div id="activityList">
 
-        <label for="activity2">Fist Activity (time is in minutes)</label>
-        <input type="text" id="activity2" placeholder="e.g., code, clean, homework">
-        <input type="numbers" id="activity1time" placeholder="30">
+        </div>
+
+        <button id="addActivity">+ Add Activity</button>
     </div>
 
     <div class="timer">
-        <h3>Are you ready?</h3>
-        <h1>00:00:00</h1>
-        <button>Start</button>
-        <button>Pause</button>
+        <h3 id="currentActivity">READY TO LOCK IN?</h3>
+        <h1 id="timerDisplay">00:00:00</h1>
+
+        <button id="startButton">Start</button>
+        <button id="pauseButton">Pause</button>
+        <button id="stopButton">STOP</button>
     </div>
+
+    <script src="script.js"></script>
 </body>
 </html>
