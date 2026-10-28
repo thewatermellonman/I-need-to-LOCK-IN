@@ -1,3 +1,13 @@
+const button = document.getElementById("closeinspo");
+const screen = document.querySelector(".screen");
+const target = document.querySelector(".inspocont");
+
+button.addEventListener("click", () => {
+    screen.style.display = "none";
+    target.style.display = "none";
+});
+
+
 const addActivityButton = document.getElementById("addActivity");
 const activityList = document.getElementById("activityList");
 

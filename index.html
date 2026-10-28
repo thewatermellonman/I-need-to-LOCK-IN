@@ -6,28 +6,41 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1 class="lockin">I NEED TO LOCK IN!!</h1>
+    <div class="screen"></div>
+    <div class="main">
+        <h1 class="lockin">I NEED TO LOCK IN!!</h1>
 
-    <div class="all">
-        <div class="whatwedoin">
-            <h3>What are you working on today?</h3>
-            
-            <div id="activityList">
+        <div class="all">
+            <div class="whatwedoin">
+                <h3>What are you working on today?</h3>
+                
+                <div id="activityList">
 
+                </div>
+
+                <button id="addActivity">+ Add Activity</button>
             </div>
 
-            <button id="addActivity">+ Add Activity</button>
-        </div>
+            <div class="timer">
+                <h3 id="currentActivity">READY TO LOCK IN?</h3>
+                <h1 id="timerDisplay">00:00:00</h1>
 
-        <div class="timer">
-            <h3 id="currentActivity">READY TO LOCK IN?</h3>
-            <h1 id="timerDisplay">00:00:00</h1>
+                <button id="startButton">Start</button>
+                <button id="pauseButton">Pause</button>
+                <button id="stopButton">STOP</button>
+            </div>
+        </div>  
+    </div>
 
-            <button id="startButton">Start</button>
-            <button id="pauseButton">Pause</button>
-            <button id="stopButton">STOP</button>
+    <div class="inspocont">
+        <div class="lockinimg">
+            <button id="closeinspo">
+                X
+            </button>
+            <img src="inspo.jpg" alt="it's time to lock in (explosions in the background)">
         </div>
-    </div>  
+    </div>
+
     <script src="script.js"></script>
 </body>
 </html>
