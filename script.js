@@ -35,20 +35,6 @@ function getActivities() {
     return taskList;
 }
 
-function startSession() {
-    activities = getActivities();
-
-    if (activities.length === 0) {
-        currentActivityDisplay.textContent = "ADD AN ACTIVITY FIRST!";
-        return;
-    }
-
-    currentActivityIndex = 0;
-    isPaused = false;
-
-    startActivity();
-}
-
 addActivityButton.addEventListener("click", function() {
     const activityDiv = document.createElement("div");
     activityDiv.classList.add("activity-card");
@@ -69,6 +55,17 @@ addActivityButton.addEventListener("click", function() {
     activityDiv.appendChild(timeInput);
 
     activityList.appendChild(activityDiv);
+
+    const deleteButton = document.createElement("button");
+    deleteButton.textContent = "X";
+    deleteButton.type = "button";
+    deleteButton.classList.add("delete-activity");
+
+    deleteButton.addEventListener("click", function() {
+        activityDiv.remove();
+    });
+
+    activityDiv.appendChild(deleteButton);
 })
 
 function startSession() {
@@ -94,7 +91,7 @@ function startSession() {
 }
 
 function startActivity() {
-    clearIntercal(timerInterval);
+    clearInterval(timerInterval);
 
     const activity = activities[currentActivityIndex];
 
@@ -120,8 +117,10 @@ function startActivityTimer() {
             if (currentActivityIndex >= activities.length) {
                 currentActivityIndex = 0;
             }
+
+            startActivity();
         }
-    })
+    }, 1000);
 }
 
 function updateTimerDisplay() {
@@ -137,4 +136,15 @@ startButton.addEventListener("click", startSession);
 pauseButton.addEventListener("click", function() {
     clearInterval(timerInterval);
     isPaused = true;
+});
+
+stopButton.addEventListener("click", function() {
+    clearInterval(timerInterval);
+
+    timeLeft = 0;
+    currentActivityIndex = 0;
+    isPaused = false;
+
+    timerDisplay.textContent = "00:00";
+    currentActivityDisplay.textContent = "READY TO LOCK IN?";
 });

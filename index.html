@@ -2,30 +2,32 @@
 <html lang="en">
 <head>
     <title>LOCK IN</title>
+    <link href="https://fonts.googleapis.com/css2?family=Bowlby+One+SC&family=Nunito:wght@400;600;700;800;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>I NEED TO LOCK IN!!</h1>
+    <h1 class="lockin">I NEED TO LOCK IN!!</h1>
 
-    <div class="whatwedoin">
-        <h3>What are you working on today?</h3>
-        
-        <div id="activityList">
+    <div class="all">
+        <div class="whatwedoin">
+            <h3>What are you working on today?</h3>
+            
+            <div id="activityList">
 
+            </div>
+
+            <button id="addActivity">+ Add Activity</button>
         </div>
 
-        <button id="addActivity">+ Add Activity</button>
-    </div>
+        <div class="timer">
+            <h3 id="currentActivity">READY TO LOCK IN?</h3>
+            <h1 id="timerDisplay">00:00:00</h1>
 
-    <div class="timer">
-        <h3 id="currentActivity">READY TO LOCK IN?</h3>
-        <h1 id="timerDisplay">00:00:00</h1>
-
-        <button id="startButton">Start</button>
-        <button id="pauseButton">Pause</button>
-        <button id="stopButton">STOP</button>
-    </div>
-
+            <button id="startButton">Start</button>
+            <button id="pauseButton">Pause</button>
+            <button id="stopButton">STOP</button>
+        </div>
+    </div>  
     <script src="script.js"></script>
 </body>
 </html>
