@@ -8,6 +8,7 @@ body {
 
 h1 {
     font-family: 'Bowlby One SC', sans-serif;
+    color:#b83265
 }
 
 .lockin {
@@ -15,15 +16,28 @@ h1 {
 }
 
 .all {
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 25px;
+    max-width: 1000px;
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+
+.whatwedoin,
+.timer {
+    background-color: #fff0f6;
+    border: 2px solid #a34675;
+    border-radius: 16px;
+    padding: 20px;
+    min-width: 0;
+    width: 100%;
+    box-sizing: border-box;
 }
 
 .activity-card {
     background-color: #fff0f6;
-    border: 2px solid #ff69b4;
+    border: 2px solid #a34675;
     border-radius: 12px;
     display: flex;
     align-items: center;

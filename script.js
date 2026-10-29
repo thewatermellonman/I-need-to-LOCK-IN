@@ -51,14 +51,14 @@ addActivityButton.addEventListener("click", function() {
 
     const activityInput = document.createElement("input");
     activityInput.type = "text";
-    activityInput.placeholder = "What are you working on?";
+    activityInput.placeholder = "Wyd?";
     activityInput.classList.add("activity-name");
 
     activityDiv.appendChild(activityInput);
 
     const timeInput = document.createElement("input");
     timeInput.type = "number";
-    timeInput.placeholder = "Minutes";
+    timeInput.placeholder = "Mins";
     timeInput.min = 1;
     timeInput.classList.add("activity-time");
 
